@@ -1,6 +1,6 @@
 # Desafio 2: Crawlers
 
-##Parte 1
+## Parte 1
 For the first part of the challenge, I created two python scripts that will virtually perform the same operation using
 different methods to get the data from reddit.
 
