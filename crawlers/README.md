@@ -1,30 +1,22 @@
 # Desafio 2: Crawlers
 
-Parte do trabalho na IDwall inclui desenvolver *crawlers/scrapers* para coletar dados de websites.
-Como nós nos divertimos trabalhando, às vezes trabalhamos para nos divertir!
+##Parte 1
+For the first part of the challenge, I created two python scripts that will virtually perform the same operation using
+different methods to get the data from reddit.
 
-O Reddit é quase como um fórum com milhares de categorias diferentes. Com a sua conta, você pode navegar por assuntos técnicos, ver fotos de gatinhos, discutir questões de filosofia, aprender alguns life hacks e ficar por dentro das notícias do mundo todo!
+### Request1.py
+This version just uses request and uses a json reader to read the data.  All the information is collected this way then
+displayed in the commend line.
 
-Subreddits são como fóruns dentro do Reddit e as postagens são chamadas *threads*.
-
-Para quem gosta de gatos, há o subreddit ["/r/cats"](https://www.reddit.com/r/cats) com threads contendo fotos de gatos fofinhos.
-Para *threads* sobre o Brasil, vale a pena visitar ["/r/brazil"](https://www.reddit.com/r/brazil) ou ainda ["/r/worldnews"](https://www.reddit.com/r/worldnews/).
-Um dos maiores subreddits é o "/r/AskReddit".
-
-Cada *thread* possui uma pontuação que, simplificando, aumenta com "up votes" (tipo um like) e é reduzida com "down votes".
-
-Sua missão é encontrar e listar as *threads* que estão bombando no Reddit naquele momento!
-Consideramos como bombando *threads* com 5000 pontos ou mais.
-
-## Entrada
-- Lista com nomes de subreddits separados por ponto-e-vírgula (`;`). Ex: "askreddit;worldnews;cats"
-
-### Parte 1
-Gerar e imprimir uma lista contendo número de upvotes, subreddit, título da thread, link para os comentários da thread, link da thread.
-Essa parte pode ser um CLI simples, desde que a formatação da impressão fique legível.
-
-### Parte 2
-Construir um robô que nos envie essa lista via Telegram sempre que receber o comando `/NadaPraFazer [+ Lista de subrredits]` (ex.: `/NadaPraFazer programming;dogs;brazil`)
+### Praw1.py
+Praw stands for Python Reddit Api Wrapper.  This version uses this wrapper to easily obtain all the data needed from
+reddit.  However, to use this you need to have an account in reddit and provide some credentials for the account.  I
+used this with my account and the script has this information to allow whoever runs this to have access to this api.
 
 
-Qualquer método para coletar os dados é válido. Caso não saiba por onde começar, procure por SeleniumHQ (Java), PhantomJS (Javascript) e Beautiful Soup (Python).
+## Parte 2
+
+For the second part of the challenge run the script bot1.py before running the telegram app.  If the script is running,
+go in the telegram app and type tial1bot and a bot name Trial1 should pop up.  If the script is running and you select
+the bot, you can now send commands to it.  If you type /NadaPraFazer [subreddits separated by ';'] [number of threads]
+the bot will respond with information about the given subreddit, with the number of threads you specified.
