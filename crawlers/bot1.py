@@ -65,11 +65,14 @@ def handle_updates(updates):
         chat = update["message"]["chat"]["id"]
         text_list = text.split()
         if text_list[0] == "/done":
-            send_message("Goodbye",chat)
+            send_message("Goodbye", chat)
         elif text_list[0] == "/start":
             send_message("Welcome to you reddit quick info bot", chat)
         elif text_list[0] =="/NadaPraFazer":
-            crawler(text_list[1], chat,text_list[2])
+            if len(text_list) == 3:
+                crawler(text_list[1], chat, text_list[2])
+            else:
+                crawler(text_list[1], chat, 3)
         elif text.startswith("/"):
             continue
 

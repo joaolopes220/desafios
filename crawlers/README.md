@@ -16,7 +16,12 @@ used this with my account and the script has this information to allow whoever r
 
 ## Parte 2
 
+To use the bot create for the second part of the challege, you need to run the bot1.py script.  The bot is not uploaded 
+to a server but this could be done if we wanted access to the bot anywhere.
+
+
 For the second part of the challenge run the script bot1.py before running the telegram app.  If the script is running,
 go in the telegram app and type tial1bot and a bot name Trial1 should pop up.  If the script is running and you select
 the bot, you can now send commands to it.  If you type /NadaPraFazer [subreddits separated by ';'] [number of threads]
-the bot will respond with information about the given subreddit, with the number of threads you specified.
+the bot will respond with information about the given subreddit, with the number of threads you specified.  If 
+[numer of threads] is left out, it will automatically return 3 threads from each subreddit.
