@@ -1,0 +1,10 @@
+For This challenge, the process involved first getting each line of code to only contain the width of desired characters.
+To implement this, the input text was broken into paragraphs and each paragraph was broken into words.  Once we had the
+different paragraphs and words, all that was left to do was create the lines with a max width of 40.  The lines were
+created for each paragraph and stored.  After this was done, the program Iterated through each line writing each line
+in the desired .txt file.
+
+For the second part of this challenge, I first thought about using python fuction for leftalign and rightalign.  Then
+I decided I could just find the difference between the desired width and the width each line occupied.  If this difference
+was greater than one, I loopped through the words until the last one and added a space until the length of the line
+was equal to the desired width.

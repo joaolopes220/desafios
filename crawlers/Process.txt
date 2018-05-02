@@ -1,0 +1,14 @@
+For this challenge, part 1, I started using beautiful soup.  However, I realized there was a easier way to do it
+using request and praw.  I built both versions because praw requires the user to have an account with reddit.  Using
+request you don't need to have an account.  Once I found that the data was just stored as a json I just found the key
+for the different data we were looking for and saved those to a variable.  Then I created a dictionary inside a dictionary
+to store all the data for each thread.
+
+For the bot, I was not sure where to start at first.  However, looking at the telegram api I found easy example to follow
+ to create the bot.  My reasoning was that I could handle the bot just like a command line interface, as long as I could
+ get the string of the command it was sending through, I could figure out what it wanted to do.  Once I got a easy example
+ working that was able to read characters, I created a if loop that would respond if the characters were equal to
+ /NadaPraFazer.  I then decided to use the string.split() function to split between the first command and the second.  This
+ allowed me to use the second command as the subreddits it wanted to find.  I added a third command so it was easier to
+ specify how many threads the user wanted to see, this make it so the user didn't get a lot of threads messaged to them
+ if they only wanted one or two. 
